@@ -8,6 +8,38 @@
   </head>
   <body>
     <div id="app">{{ message }}</div>
+    <!--  -->
+    <div id="app-2">
+      <span v-bind:title="message">
+        Mueva el mouse sobre mi unos segundos para mer mi titulo enlazado
+        dinamicamente.
+      </span>
+    </div>
+
+    <!--  -->
+    <div id="app-3">
+      <span v-if="seen"> ahora me ve? </span>
+    </div>
+
+    <!--  -->
+
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">{{ todo.text }}</li>
+      </ol>
+    </div>
+
+    <div id="app-5">
+      <p>{{message}}</p>
+      <button v-on:click="reverseMessage">Mensaje Invertido</button>
+    </div>
+    <!--  -->
+
+    <div id="app-6">
+      <p>{{message}}</p>
+      <input v-model="message" />
+    </div>
+    <!-- MANTENER SIEMPRE ABAJO HAHA -->
     <script src="main.js"></script>
   </body>
 </html>
